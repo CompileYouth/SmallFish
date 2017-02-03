@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # OSX
 #
 .DS_Store
@@ -90,4 +89,5 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
->>>>>>> 700aba25cd2e08923dd0d98ac00a541125121016
+
+dist
