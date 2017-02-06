@@ -11,6 +11,8 @@ import {
   View
 } from 'react-native';
 
+import Application from './src/app/Application';
+
 export default class SmallFish extends Component {
   render() {
     return (
@@ -18,6 +20,7 @@ export default class SmallFish extends Component {
         <Text>
           Just for test!hahah
         </Text>
+        <Application />
       </View>
     );
   }
