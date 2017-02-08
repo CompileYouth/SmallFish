@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 import {
+  ListView,
   View,
-  ListView
+  Text
 } from 'react-native';
 
-export default class Application extends Component {
+//import Item from './Item';
+
+export default class List extends Component {
   render() {
     return (
-      <ListView>
-        <View />
-        <View />
-      </ListView>
+      <View><Text>Hello</Text></View>
     );
   }
 }

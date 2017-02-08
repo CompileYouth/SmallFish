@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 
 import {
-  View
+  View,
+  Text
 } from 'react-native';
 
 export default class Application extends Component {
   render() {
-    return (<View />);
+    return (
+      <View>
+        <Text>Hello Item</Text>
+      </View>
+    );
   }
 }
