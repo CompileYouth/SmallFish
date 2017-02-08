@@ -4,22 +4,10 @@
  * @flow
  */
 
-import React, { Component } from 'react';
 import {
-  AppRegistry,
-  View
+  AppRegistry
 } from 'react-native';
 
-import Application from './src/app/Application';
-
-export default class SmallFish extends Component {
-  render() {
-    return (
-      <View>
-        <Application />
-      </View>
-    );
-  }
-}
+import SmallFish from './src';
 
 AppRegistry.registerComponent('SmallFish', () => SmallFish);
