@@ -24,10 +24,7 @@ export default class List extends Component {
   }
 
   _renderTodo(todo) {
-    return (<Item
-      text={todo.text}
-      date={todo.date}
-    />);
+    return <Item />;
   }
 
   render() {
