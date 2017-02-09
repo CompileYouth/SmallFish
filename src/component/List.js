@@ -14,11 +14,15 @@ export default class List extends Component {
 
     this.state = {
       allTodos: ds.cloneWithRows([
-        { text: 'todo1', date: '2017-02-07' },
-        { text: 'todo2', date: '2017-02-07' },
-        { text: 'todo3', date: '2017-02-07' },
-        { text: 'todo4', date: '2017-02-07' },
-        { text: 'todo5', date: '2017-02-07' }
+        { text: 'todo1', date: '2017-02-07', prior: 1 },
+        { text: 'todo2', date: '2017-02-07', prior: 2 },
+        { text: 'todo3', date: '2017-02-07', prior: 3 },
+        { text: 'todo4', date: '2017-02-07', prior: 4 },
+        { text: 'todo5', date: '2017-02-07', prior: 5 },
+        { text: 'todo2', date: '2017-02-07', prior: 6 },
+        { text: 'todo3', date: '2017-02-07', prior: 7 },
+        { text: 'todo4', date: '2017-02-07', prior: 8 },
+        { text: 'todo5', date: '2017-02-07', prior: 9 },
       ])
     };
   }
