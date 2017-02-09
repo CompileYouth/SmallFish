@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import {
   View,
@@ -6,10 +6,16 @@ import {
 } from 'react-native';
 
 export default class Application extends Component {
+  static propTypes = {
+    text: PropTypes.string,
+    date: PropTypes.string
+  }
+
   render() {
     return (
       <View>
-        <Text>Hello Item</Text>
+        <Text>{this.props.text}</Text>
+        <Text>{this.props.date}</Text>
       </View>
     );
   }
