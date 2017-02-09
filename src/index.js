@@ -22,7 +22,7 @@ export default class SmallFish extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#123456',
+    backgroundColor: '#212121',
     width,
     height,
     paddingTop: 20
