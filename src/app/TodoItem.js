@@ -14,11 +14,11 @@ export default class Application extends Item {
   }
 
   render() {
-    console.log('prior' + 0);
+    console.log(`prior${0}`);
     return (
-      <View style={[styles.item, styles['prior' + this.props.prior]]}>
-        <Text>Hello Item</Text>
-        <Text>Today 10:20</Text>
+      <View style={[styles.item, styles[`prior${this.props.prior}`]]}>
+        <Text>{this.props.text}</Text>
+        { this.props.date ? <Text>{this.props.date}</Text> : null }
       </View>
     );
   }
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: 'lightgrey',
     height: 50,
-    borderBottomColor: 'lightslategray',
-    borderBottomWidth: 1
+    borderBottomColor: '#FAFAFA',
+    borderBottomWidth: 0.5
   },
   text: {
 
