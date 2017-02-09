@@ -4,6 +4,7 @@ import {
   ListView
 } from 'react-native';
 
+import TodoItem from './TodoItem';
 import List from '../component/List';
 
 export default class TodoList extends List {
@@ -11,6 +12,10 @@ export default class TodoList extends List {
     if (e.nativeEvent.contentOffset.y < -10) {
       console.log('Now you can create a new item.');
     }
+  }
+
+  _renderTodo(todo) {
+    return <TodoItem />;
   }
 
   render() {
