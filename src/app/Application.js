@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
 import {
-  Text,
   View,
   StyleSheet,
-  TouchableHighlight,
   PanResponder
 } from 'react-native';
 
@@ -58,13 +56,6 @@ export default class Application extends Component {
       <View
         style={styles.app}
       >
-        <Text>Hello SmallFish</Text>
-        <TouchableHighlight
-          onPressIn={this._onPressIn}
-          onPressOut={this._onPressOut}
-        >
-          <Text>Hello, you can touch me</Text>
-        </TouchableHighlight>
         <TodoList />
       </View>
     );
@@ -73,7 +64,7 @@ export default class Application extends Component {
 
 const styles = StyleSheet.create({
   app: {
-    backgroundColor: '#FDD7E4',
+    backgroundColor: '#212121',
     flex: 1
   }
 });
