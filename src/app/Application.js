@@ -8,7 +8,7 @@ import {
   PanResponder
 } from 'react-native';
 
-//import TodoList from '../component/List';
+import TodoList from '../component/List';
 
 export default class Application extends Component {
   componentWillMount() {
@@ -66,6 +66,7 @@ export default class Application extends Component {
         >
           <Text>Hello, you can touch me</Text>
         </TouchableHighlight>
+        <TodoList />
       </View>
     );
   }
