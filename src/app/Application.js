@@ -57,7 +57,6 @@ export default class Application extends Component {
     return (
       <View
         style={styles.app}
-        {...this._createItemPanResponder.panHandlers}
       >
         <Text>Hello SmallFish</Text>
         <TouchableHighlight
