@@ -22,6 +22,7 @@
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "jest": "18.1.0",
+    "jest-cli": "^18.1.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "react-test-renderer": "~15.4.0-rc.4",
