@@ -15,7 +15,11 @@ export default class TodoList extends List {
   }
 
   _renderTodo(todo) {
-    return <TodoItem prior={todo.prior} />;
+    return (<TodoItem
+      prior={todo.prior}
+      text={todo.text}
+      date={todo.date}
+    />);
   }
 
   render() {
