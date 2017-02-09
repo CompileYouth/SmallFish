@@ -8,7 +8,7 @@ import {
   PanResponder
 } from 'react-native';
 
-import TodoList from '../component/List';
+import TodoList from './TodoList';
 
 export default class Application extends Component {
   componentWillMount() {
