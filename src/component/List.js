@@ -7,6 +7,11 @@ import {
 import Item from './Item';
 
 export default class List extends Component {
+  constructor() {
+    super();
+    this._renderTodo = this._renderTodo.bind(this);
+  }
+
   componentWillMount() {
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2

@@ -8,6 +8,11 @@ import TodoItem from './TodoItem';
 import List from '../component/List';
 
 export default class TodoList extends List {
+  constructor() {
+    super();
+    this._handleItemClick = this._handleItemClick.bind(this);
+  }
+
   _handleScroll(e) {
     if (e.nativeEvent.contentOffset.y < -10) {
       console.log('Now you can create a new item.');
@@ -19,6 +24,7 @@ export default class TodoList extends List {
       prior={todo.prior}
       text={todo.text}
       date={todo.date}
+      onClick={this._handleItemClick}
     />);
   }
 
@@ -32,6 +38,10 @@ export default class TodoList extends List {
         }}
       />
     );
+  }
+
+  _handleItemClick(e) {
+    console.log(e);
   }
 
   render() {

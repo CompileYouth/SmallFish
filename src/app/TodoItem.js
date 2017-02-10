@@ -10,12 +10,17 @@ import {
 import Item from '../component/Item';
 
 export default class Application extends Item {
+  constructor() {
+    super();
+    this._handleItemPress = this._handleItemPress.bind(this);
+  }
+  
   componentWillMount() {
 
   }
 
   _handleItemPress(e) {
-    console.log(e.nativeEvent.target);
+    this.props.onClick(e);
   }
 
   render() {
@@ -46,7 +51,7 @@ const styles = StyleSheet.create({
     marginLeft: 15
   },
   text: {
-    fontSize: 20,
+    fontSize: 16,
     color: '#212121',
     fontFamily: 'Helvetica'
   },
