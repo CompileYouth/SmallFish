@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 
 import {
   View
@@ -11,6 +12,14 @@ export default class TodoList extends List {
   constructor() {
     super();
     this._handleItemClick = this._handleItemClick.bind(this);
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.showAllTodos) {
+      this.setState({
+        allTodos: this.ds.cloneWithRows(this.todos)
+      });
+    }
   }
 
   _handleScroll(e) {
@@ -40,8 +49,14 @@ export default class TodoList extends List {
     );
   }
 
-  _handleItemClick(e) {
-    console.log(e);
+  _handleItemClick(e, index) {
+    // Hide all todos above the selected todo
+    this.setState({
+      allTodos: this.ds.cloneWithRows(_.drop(this.todos, index))
+    });
+
+    // Show overlay
+    this.props.onItemClick();
   }
 
   render() {

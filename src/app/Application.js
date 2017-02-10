@@ -7,9 +7,21 @@ import {
 } from 'react-native';
 
 import TodoList from './TodoList';
+import Overlay from './Overlay';
 
 export default class Application extends Component {
+  constructor() {
+    super();
+    this._handleOverlayClick = this._handleOverlayClick.bind(this);
+    this._handleTodoListItemClick = this._handleTodoListItemClick.bind(this);
+  }
+
   componentWillMount() {
+    this.state = {
+      showOverlay: false,
+      showAllTodos: true
+    };
+
     this._createItemPanResponder = PanResponder.create({
       onStartShouldSetPanResponder: this._handleStartShouldSetPanResponder,
       onMoveShouldSetPanResponder: this._handleMoveShouldSetPanResponder,
@@ -51,12 +63,31 @@ export default class Application extends Component {
     console.log('end', e, gestureState);
   }
 
+  _handleOverlayClick() {
+    // Hide overlay
+    this.setState({
+      showOverlay: false,
+      showAllTodos: true
+    });
+  }
+
+  _handleTodoListItemClick() {
+    this.setState({
+      showOverlay: true,
+      showAllTodos: false
+    });
+  }
+
   render() {
     return (
       <View
         style={styles.app}
       >
-        <TodoList />
+        <TodoList
+          onItemClick={this._handleTodoListItemClick}
+          showAllTodos={this.state.showAllTodos}
+        />
+        {this.state.showOverlay ? <Overlay onClick={this._handleOverlayClick} /> : null}
       </View>
     );
   }

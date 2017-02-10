@@ -14,13 +14,9 @@ export default class Application extends Item {
     super();
     this._handleItemPress = this._handleItemPress.bind(this);
   }
-  
-  componentWillMount() {
-
-  }
 
   _handleItemPress(e) {
-    this.props.onClick(e);
+    this.props.onClick(e, this.props.prior);
   }
 
   render() {
