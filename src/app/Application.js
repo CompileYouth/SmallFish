@@ -64,7 +64,6 @@ export default class Application extends Component {
   }
 
   _handleOverlayClick() {
-    // Hide overlay
     this.setState({
       showOverlay: false,
       showAllTodos: true
