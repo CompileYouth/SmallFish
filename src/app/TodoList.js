@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  ListView
+  View
 } from 'react-native';
 
 import TodoItem from './TodoItem';
@@ -22,8 +22,23 @@ export default class TodoList extends List {
     />);
   }
 
+  _renderSeparator(sectionID, rowID, adjacentRowHighlighted) {
+    return (
+      <View
+        key={`${sectionID}-${rowID}`}
+        style={{
+          height: adjacentRowHighlighted ? 0.5 : 0.5,
+          backgroundColor: adjacentRowHighlighted ? '#FAFAFA' : '#FAFAFA',
+        }}
+      />
+    );
+  }
+
   render() {
     const list = super.render();
-    return React.cloneElement(list, { onScroll: this._handleScroll });
+    return React.cloneElement(list, {
+      onScroll: this._handleScroll,
+      renderSeparator: this._renderSeparator
+    });
   }
 }
