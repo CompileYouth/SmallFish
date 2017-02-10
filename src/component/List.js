@@ -25,10 +25,7 @@ export default class List extends Component {
       { text: '打豆豆', date: '2017-02-07 10:08', prior: 8, index: 8 },
     ];
     this.ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => {
-        console.log(r1, r2);
-        return r1 !== r2;
-      }
+      rowHasChanged: (r1, r2) => r1 !== r2
     });
 
     this.state = {
